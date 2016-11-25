@@ -82,5 +82,18 @@
             android:id="@+id/animalImage"
             android:layout_width="match_parent"
             android:layout_height="187dp"/>
+
+        <Button
+            android:text="EXIT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/exit" />
+
+        <Button
+            android:text="RESET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/reset" />
     </LinearLayout>
+
 </LinearLayout>

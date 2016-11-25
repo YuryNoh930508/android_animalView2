@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     TextView label_startChkBox, label_animalGroup;
     CheckBox startChkBox;
     RadioGroup animalGroup;
-    Button commit;
+    Button commit, exit, reset;
     LinearLayout linear1;
     ImageView animalImage;
 
@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
         startChkBox = (CheckBox)findViewById(R.id.startChkBox);
         animalGroup = (RadioGroup)findViewById(R.id.animalGroup);
         commit  = (Button)findViewById(R.id.commit);
+        exit = (Button)findViewById(R.id.exit);
+        reset = (Button)findViewById(R.id.reset);
         animalImage = (ImageView)findViewById(R.id.animalImage);
         linear1 = (LinearLayout)findViewById(R.id.linear1);
 
@@ -58,6 +60,23 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     animalImage.setImageResource(R.drawable.rabbit);
                 }
+            }
+        });
+        exit.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                finish();
+                System.exit(0);
+            }
+        });
+        reset.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                animalGroup.check(R.id.dog);
+                animalImage.setImageResource(0);
+                startChkBox.setChecked(false);
             }
         });
     }
